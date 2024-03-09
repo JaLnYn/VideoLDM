@@ -1,0 +1,22 @@
+#!/bin/bash  
+#SBATCH -J test  
+#SBATCH --ntasks=1  
+#SBATCH --mem=4G  
+#SBATCH -c 2  
+#SBATCH --time=2:00:00  
+#SBATCH --partition=t4v1,t4v2,rtx6000  
+#SBATCH --qos=normal  
+#SBATCH --export=ALL  
+#SBATCH --output=%x.%j.log  
+#SBATCH --gres=gpu:1
+#
+
+# Activate your virtual environment
+source /scratch/ssd004/scratch/ayuan/git/Transformer/venv/bin/activate 
+
+# Run the script
+python scripts/infer_pixart_8_bits.py
+
+# Deactivate the virtual environment
+deactivate
+

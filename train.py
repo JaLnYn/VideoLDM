@@ -11,7 +11,7 @@ Original file is located at
 # 
 # !pip install diffusers einops opencv-python-headless accelerate
 # !git clone https://github.com/srpkdyy/VideoLDM.git
-# !sed -i 's/attn_num_head_channels/num_attention_heads/g' VideoLDM/*.py
+# !sed -i 's/num_attention_heads/num_attention_heads/g' VideoLDM/*.py
 # 
 # !wget https://ak.picdn.net/shutterstock/videos/31221946/preview/stock-footage-fun-clown-d-animation.mp4
 
